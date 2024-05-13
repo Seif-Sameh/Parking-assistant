@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking assistant - Login</title>
+
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="general.css">
+
+</head>
+<body>
+    <video autoplay muted loop id="bgVideo" >
+        <source src="./assets/videoplayback.mp4" type="video/mp4">
+     </video>
+    <div class="container">
+        <div class="logoContainer">
+            <img src="./assets/pngegg (1).png" alt="logo" class="logo">
+        </div>
+
+        <h1 class="welcome">Welcome to Parking Assistant</h1>
+        <form class="loginForm">
+            <input type="email" id="userEmail" class="email" placeholder="Email">
+            <span class="invalidEmail">Invalid Email</span>
+            <input type="password" id="password" class="password" placeholder="Password">
+            <span class="incorrectPassword">Incorrect Password</span>
+            <input type="submit" value="Login">
+        </form>
+        <div class="register">
+            <p>
+                Don't have an account? 
+                <a href="./signup.html">
+                    Sign-Up
+                </a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
