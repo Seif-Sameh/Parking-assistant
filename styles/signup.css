@@ -1,0 +1,161 @@
+:root{
+    --bgColor: #121211;
+    --PrimaryVarient: #3700B3;
+    --PrimaryLight: #BB86FC;
+    --Error: #CF6679;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#bgVideo{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.container{
+    width: 35%;
+    background-color: var(--bgColor);
+    border: none;
+    border-radius: 10px;
+
+    padding: 20px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 80px;
+    height: 50px;
+}
+
+.welcome{
+    font-size: 24px;
+    margin: 20px 0;
+    text-align: center;
+
+}
+@media screen and (max-width: 1024px){
+    .container{
+        width: 45%;
+    }
+    .welcome{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 768px){
+    .container{
+        width: 45%;
+    }
+    .welcome{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 480px){
+    .container{
+        width: 65%;
+    }
+    .welcome{
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+.signUpForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.signUpForm input{
+    height: 40px;
+    padding: 5px 20px;
+    background-color: var(--bgColor);
+    outline: none;
+    border: 2px solid white;
+    border-radius: 50px;
+    margin: 18px 0;
+    color: white;
+    font-size: 18px;
+}
+
+.signUpForm input:focus{
+    border: 2px solid var(--PrimaryVarient);
+}
+
+.signUpForm input:last-of-type{
+    width: 50%;
+    height: 50px;
+    border: none;
+    background-color: var(--PrimaryVarient);
+    margin-left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+.signUpForm input:last-of-type:active{
+    background-color: white;
+    color: var(--PrimaryVarient);
+}
+.signUpForm .invalid{
+    border: 2px solid var(--Error);
+}
+.signUpForm::after{
+    content: '';
+    width: 80%;
+    height: 1px;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.register{
+    margin-top: 30px;
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+}
+.register a{
+    color: var(--PrimaryLight);
+}
+.register a:visited{
+    color: var(--PrimaryLight);
+}
+
+.invalidEmail, .incorrectPassword{
+    padding-left: 25px;
+    color: var(--Error);
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .signUpForm input:last-of-type{
+        width: 100%;
+        height: 50px;
+    }
+
+}
