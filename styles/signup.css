@@ -133,7 +133,7 @@ body{
 }
 
 .register{
-    margin-top: 30px;
+    margin: 20px 0px;
     color: white;
     font-weight: 300;
     font-size: 16px;
@@ -146,7 +146,7 @@ body{
     color: var(--PrimaryLight);
 }
 
-.invalidEmail, .incorrectPassword{
+.invalidUserName, .invalidEmail, .incorrectPassword{
     padding-left: 25px;
     color: var(--Error);
     display: none;
