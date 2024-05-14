@@ -1,0 +1,125 @@
+:root{
+    --bgColor: #121211;
+    --PrimaryVarient: #6200EE;
+    --PrimaryLight: #BB86FC;
+    --Error: #CF6679;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#bgImage{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.logOut{
+    position: absolute;
+    right: 20px;
+    top:20px
+}
+.logOut .logoutBtn{
+    width: 100px;
+    height: 40px;
+    background-color: var(--PrimaryVarient);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.home{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.home .homeBtn{
+    width: 200px;
+    height: 40px;
+    background-color: var(--PrimaryVarient);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.container{
+    width: 40%;
+    background-color: var(--bgColor);
+    border: none;
+    border-radius: 10px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .checkContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 2px dotted white;
+    text-align: center;
+}
+.container .checkContainer .checkIcon{
+    width: 100px;
+}
+.container .details{
+    padding: 30px 0;
+    border-bottom: 2px dotted white;
+    display: flex;
+    justify-content: space-between;
+}
+.container .description, .container .price{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .price{
+    align-items: end;
+    justify-content: space-between;
+}
+.container .title{
+    font-weight: bold;
+    font-size: 20px;
+}
+.container .total{
+    padding-top: 30px ;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-y: scroll;
+    }
+    .container{
+        width: 70%;
+    }
+
+}

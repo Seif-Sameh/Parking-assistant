@@ -49,14 +49,29 @@ body{
     background-color: var(--bgColor);
     border: none;
     border-radius: 10px;
-    padding: 20px 20px;
+    padding: 40px 20px;
     display: flex;
     justify-content: space-between;
 }
+
+
 .container .heading, .container .reservation{
     width: 48%;
 }
 
+@media screen and (max-width: 768px){
+    body{
+        overflow-y: scroll;
+    }
+    .container{
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .container .heading, .container .reservation{
+        width: 100%;
+    }
+}
 .container .heading h1{
     font-size: 40px;
     margin-bottom: 10px;
@@ -96,6 +111,7 @@ body{
     font-size: 16px;
     font-weight: bold;
 }
+
 .container .reservation .type .active{
     border: 2px solid var(--PrimaryVarient);
     background-color: white;
@@ -118,6 +134,9 @@ body{
     padding: 5px 15px;
     border-radius: 10px;
     margin: 10px 0px;
+}
+.container .reservation .time input::placeholder{
+    color: white;
 }
 .container .reservation .slots{
     display: none;
