@@ -15,16 +15,27 @@
     <div>
         <img src="./assets/john-matychuk-yvfp5YHWGsc-unsplash.jpg" alt="" id="bgImage">
     </div>
+    <div class="logOut">
+        <a href="">
+            <button class="logoutBtn">
+                Log Out
+            </button>
+        </a>
+    </div>
 
     <div class="container">
         <div class="heading">
             <h1>Secure your parking spot hassle-free!</h1>
-            <p>Reserve quickly for any duration, ensuring convenience for all your parking needs.</p>
             <p>Never worry about finding parking again with our efficient solution.</p>
+            <div class="pricing">
+                <p>Regular: <span>12 SAR/hr</span></p>
+                <p>VIP: <span>18 SAR/hr</span></p>
+            </div>
         </div>
         <div class="reservation">
             <form class="reservationForm" method="get">
                 <div class="type">
+                    <input type="hidden" id="type" name="type" value="Regular">
                     <input type="button" name="reservationType" id="regular" value="Regular">
                     <input type="button" name="reservationType" id="vip" value="VIP">
                 </div>
@@ -35,6 +46,8 @@
                     <input type="time" name="endTime" id="endTime" required>
                 </div>
                 <div class="slots">
+                    <input type="hidden" id="slotLetterValue" name="slotLetterValue" value="" required>
+                    <input type="hidden" id="slotNumberValue" name="slotNumberValue" value="" required>
                     <div class="slotLetters">
                         <input type="button" name="slotLetter" id="A" value="A">
                         <input type="button" name="slotLetter" id="B" value="B">
@@ -76,6 +89,7 @@
                         <input type="button" name="slotNumber" id="9" value="9">
                     </div>
                 </div>
+                <span class="emptySlot">Please select your parking slot</span>
                 <div class="submit">
                     <input type="submit" id="submit" class="submitBtn">
                 </div>
