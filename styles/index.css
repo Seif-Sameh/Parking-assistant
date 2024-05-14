@@ -1,0 +1,126 @@
+:root{
+    --bgColor: #121211;
+    --PrimaryVarient: #6200EE;
+    --PrimaryLight: #BB86FC;
+    --Error: #CF6679;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#bgImage{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.container{
+    width: 70%;
+    background-color: var(--bgColor);
+    border: none;
+    border-radius: 10px;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.container .heading, .container .reservation{
+    width: 48%;
+}
+.container .reservation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container .reservation .type{
+    display: flex;
+    justify-content: space-between;
+}
+.container .reservation .type input{
+    width: 45%;
+    height: 40px;
+    background-color: var(--PrimaryVarient);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+.container .reservation .type .active{
+    border: 2px solid var(--PrimaryVarient);
+    background-color: white;
+    color: var(--PrimaryVarient);
+}
+
+.container .reservation .time{
+    margin-top: 30px;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 10px 0;
+}
+.container .reservation .time input{
+    background-color: var(--bgColor);
+    color: white;
+    outline: none;
+    border: 1px solid var(--PrimaryVarient);
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+.container .reservation .slotLetters{
+    padding: 4px;
+}
+.container .reservation .slots input{
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    margin: 3px 5px;
+}
+.container .reservation .slots .slotNumbers{
+    border: 1px solid gray;
+    margin-top: 10px;
+    padding: 4px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+.container .reservation .slots .active{
+    background-color: var(--PrimaryVarient);
+    color: white;
+}
+.container .reservation .submit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+.container .reservation .submitBtn{
+    width: 100%;
+    height: 40px;
+    background-color: var(--PrimaryVarient);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}

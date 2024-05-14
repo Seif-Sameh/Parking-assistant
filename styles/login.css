@@ -1,6 +1,6 @@
 :root{
     --bgColor: #121211;
-    --PrimaryVarient: #3700B3;
+    --PrimaryVarient: #6200EE;
     --PrimaryLight: #BB86FC;
     --Error: #CF6679;
 }
@@ -32,9 +32,7 @@ body{
     background-color: var(--bgColor);
     border: none;
     border-radius: 10px;
-
     padding: 20px 20px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
