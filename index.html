@@ -1,102 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parking Assistant - Home</title>
+    <title>Parking assistant - Login</title>
 
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/login.css">
     <link rel="stylesheet" href="./styles/general.css">
 
 </head>
-
 <body>
-    <div>
-        <img src="./assets/john-matychuk-yvfp5YHWGsc-unsplash.jpg" alt="" id="bgImage">
-    </div>
-    <div class="logOut">
-        <a href="./login.html">
-            <button class="logoutBtn">
-                Log Out
-            </button>
-        </a>
-    </div>
-
+    <video autoplay muted loop id="bgVideo" >
+        <source src="./assets/videoplayback.mp4" type="video/mp4">
+     </video>
     <div class="container">
-        <div class="heading">
-            <h1>Secure your parking spot hassle-free!</h1>
-            <p>Never worry about finding parking again with our efficient solution.</p>
-            <div class="pricing">
-                <p>Regular: <span>12 SAR/hr</span></p>
-                <p>VIP: <span>18 SAR/hr</span></p>
-            </div>
+        <div class="logoContainer">
+            <img src="./assets/pngegg (1).png" alt="logo" class="logo">
         </div>
-        <div class="reservation">
-            <form class="reservationForm" method="get" action="./receipt.html">
-                <div class="type">
-                    <input type="hidden" id="type" name="type" value="Regular">
-                    <input type="button" name="reservationType" id="regular" value="Regular">
-                    <input type="button" name="reservationType" id="vip" value="VIP">
-                </div>
-                <div class="time">
-                    <Label>From</Label>
-                    <input type="time" name="startTime" id="startTime" required>
-                    <Label>To</Label>
-                    <input type="time" name="endTime" id="endTime" required>
-                </div>
-                <div class="slots">
-                    <input type="hidden" id="slotLetterValue" name="slotLetterValue" value="" required>
-                    <input type="hidden" id="slotNumberValue" name="slotNumberValue" value="" required>
-                    <div class="slotLetters">
-                        <input type="button" name="slotLetter" id="A" value="A">
-                        <input type="button" name="slotLetter" id="B" value="B">
-                        <input type="button" name="slotLetter" id="C" value="C">
-                        <input type="button" name="slotLetter" id="D" value="D">
-                        <input type="button" name="slotLetter" id="E" value="E">
-                        <input type="button" name="slotLetter" id="F" value="F">
-                        <input type="button" name="slotLetter" id="G" value="G">
-                        <input type="button" name="slotLetter" id="H" value="H">
-                        <input type="button" name="slotLetter" id="I" value="I">
-                        <input type="button" name="slotLetter" id="J" value="J">
-                        <input type="button" name="slotLetter" id="K" value="K">
-                        <input type="button" name="slotLetter" id="L" value="L">
-                        <input type="button" name="slotLetter" id="M" value="M">
-                        <input type="button" name="slotLetter" id="N" value="N">
-                        <input type="button" name="slotLetter" id="O" value="O">
-                        <input type="button" name="slotLetter" id="P" value="P">
-                        <input type="button" name="slotLetter" id="Q" value="Q">
-                        <input type="button" name="slotLetter" id="R" value="R">
-                        <input type="button" name="slotLetter" id="S" value="S">
-                        <input type="button" name="slotLetter" id="T" value="T">
-                        <input type="button" name="slotLetter" id="U" value="U">
-                        <input type="button" name="slotLetter" id="V" value="V">
-                        <input type="button" name="slotLetter" id="W" value="W">
-                        <input type="button" name="slotLetter" id="X" value="X">
-                        <input type="button" name="slotLetter" id="Y" value="Y">
-                        <input type="button" name="slotLetter" id="Z" value="Z">
-                    </div>
-                    <div class="slotNumbers">
-                        <input type="button" name="slotNumber" id="0" value="0">
-                        <input type="button" name="slotNumber" id="1" value="1">
-                        <input type="button" name="slotNumber" id="2" value="2">
-                        <input type="button" name="slotNumber" id="3" value="3">
-                        <input type="button" name="slotNumber" id="4" value="4">
-                        <input type="button" name="slotNumber" id="5" value="5">
-                        <input type="button" name="slotNumber" id="6" value="6">
-                        <input type="button" name="slotNumber" id="7" value="7">
-                        <input type="button" name="slotNumber" id="8" value="8">
-                        <input type="button" name="slotNumber" id="9" value="9">
-                    </div>
-                </div>
-                <span class="emptySlot">Please select your parking slot</span>
-                <div class="submit">
-                    <input type="submit" id="submit" class="submitBtn" value="Submit">
-                </div>
-            </form>
+
+        <h1 class="welcome">Welcome to Parking Assistant</h1>
+        <form class="loginForm" action="/home.html">
+            <input type="email" id="useremail" class="email" placeholder="Email">
+            <span class="invalidEmail">Invalid Email</span>
+            <input type="password" id="password" class="password" placeholder="Password">
+            <span class="incorrectPassword">Incorrect Password</span>
+            <input type="submit" value="Login">
+        </form>
+        <div class="register">
+            <p>
+                Don't have an account? 
+                <a href="./signup.html">
+                    Sign-Up
+                </a>
+            </p>
         </div>
     </div>
-    <script src="./scripts/index.js"></script>
 </body>
-
 </html>
